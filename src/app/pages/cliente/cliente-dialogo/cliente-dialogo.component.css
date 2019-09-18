@@ -1,0 +1,21 @@
+.form{
+    padding: 1%;
+    height: 790px;
+    width: 1200px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .mat-tab-group{
+      height: 500px;
+  }
+
+  .mat-tab{
+      padding: 5px;
+      height: 900px;
+  }

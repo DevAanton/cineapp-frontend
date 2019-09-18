@@ -1,0 +1,23 @@
+
+<div style="display: flex; justify-content: center; padding: 5%;">
+  
+    <mat-card class="body-card">
+
+      <img mat-card-image [src]="imagenData" *ngIf="imagenEstado"/>
+      <mat-card-title-group>
+        
+        <!-- <div mat-card-avatar class="body-header-image"></div> -->
+          <mat-card-title>Usuario:</mat-card-title>
+          <mat-card-subtitle class="subtitulo">{{usuarioR}}</mat-card-subtitle>
+          
+      </mat-card-title-group>
+      
+      <mat-card-title-group>
+          <mat-card-title>Roles:</mat-card-title>
+          <mat-card-subtitle class="subtitulo">{{roles}}</mat-card-subtitle>        
+      </mat-card-title-group>
+      
+      
+    </mat-card>
+    
+    </div>

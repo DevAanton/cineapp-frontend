@@ -1,0 +1,52 @@
+<form [formGroup]="form" #frmUsuario="ngForm">
+<mat-tab-group>
+    <mat-tab label="Datos Personales">
+        <mat-form-field>
+            <input matInput placeholder="Nombres" [(ngModel)]="cliente.nombres" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          
+          <mat-form-field>
+            <input matInput placeholder="Apellidos" [(ngModel)]="cliente.apellidos" type="tel" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        
+          <mat-form-field>
+              <input matInput placeholder="DNI" [(ngModel)]="cliente.dni" type="ss" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+        
+            <mat-form-field>
+        
+                <input matInput [matDatepicker]="picker" placeholder="Fecha Nacimiento" [max]="maxFecha" [(ngModel)]="cliente.fechaNac" [ngModelOptions]="{standalone: true}">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                
+              </mat-form-field>
+          
+          <button mat-button color="primary" onclick="document.getElementById('fileToUpload').click()">Seleccionar archivo</button>
+          <input id="fileToUpload" type="file" (change)="selectFile($event)" style="display:none;">
+          <img mat-card-image [src]="imagenData" *ngIf="imagenEstado" width="40%" height="40%"/>
+          <p>{{labelFile}}</p>
+
+    </mat-tab>
+    <mat-tab label="Datos del Usuario">
+      <mat-form-field>
+        <input matInput placeholder="Nombre de Usuario" formControlName="usuario" type="text">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" name="password" placeholder="Contraseña" formControlName="password">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" placeholder="Repetir contraseña" formControlName="password" 
+          required>
+      </mat-form-field>
+  
+        
+      </mat-tab>
+    </mat-tab-group>
+
+  </form>
+  
+  
+  <button mat-raised-button color="primary" (click)="operar()">Aceptar</button>
+  <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>

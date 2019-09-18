@@ -1,0 +1,21 @@
+.body-card {
+    width: 300px;
+    min-height: 300px;
+  }
+
+  .img-data{
+    width: 80%;
+    align-content: center;
+  }
+  
+  .body-header-image {
+    background-image: url('/../../assets/user.png');
+    background-size: cover;
+  }
+
+  .subtitulo{
+    /* font-size: 25px; */
+    color: rgb(53, 112, 241)
+  }
+
+  
